@@ -1,0 +1,34 @@
+TCN DATA EXTRACTION SUMMARY
+==================================================
+
+Files processed: 104/104
+Success rate: 100.0%
+Total records: 687,692
+
+EXTRACTED PARAMETERS:
+------------------------------
+GPS     : Lat, Lng, Alt, Spd
+IMU     : GyrX, GyrY, GyrZ, AccX, AccY, AccZ
+BARO    : Press, Temp
+ATT     : Roll, Pitch, Yaw
+AHR2    : Roll, Pitch, Yaw
+XKF1    : VN, VE, VD, PN, PE, PD
+XKF3    : IVN, IVE, IVD
+MAG     : MagX, MagY, MagZ
+VIBE    : VibeX, VibeY, VibeZ
+
+OUTPUT FORMAT:
+------------------------------
+• One CSV file per input log file
+• Filename format: [original_name]_tcn_data.csv
+• Time-synchronized data with interpolation
+• Column format: [MESSAGE_TYPE]_[PARAMETER]
+
+NEXT STEPS FOR TCN TRAINING:
+------------------------------
+1. Review CSV files for data quality
+2. Combine multiple files for larger dataset
+3. Normalize and scale the data
+4. Create sliding time windows
+5. Define target variables (GPS error)
+6. Split into train/validation/test sets
